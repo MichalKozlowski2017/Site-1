@@ -1,0 +1,163 @@
+.contests__list__contest__shops-btn {
+    color: $primary;
+    cursor: pointer;
+    position: relative;
+    z-index: 99999;
+    position: absolute;
+    font-size: 14px;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include screen(200px, 500px) {
+        transform: translateY(0);
+        top: 20px;
+        font-size: 12px;
+    }
+    @include screen(992px, 1200px) {
+        transform: translateY(0);
+        top: 20px;
+
+    }
+    @include mq($min-width: 1200px) {
+        font-size: 17px;
+    }
+    &:after {
+        content: '';
+        width: 10px;
+        height: 15px;
+        background-image: url('/images/arrow-more.png');
+        background-size: 10px 15px;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &--single {
+        bottom: -20px;
+        top: auto;
+        transform: translateY(0);
+        @include mq($min-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+        }
+        @include mq($min-width: 992px) {
+            font-size: 17px;
+        }
+    }
+}
+
+
+/*= End of Media 768px =*/
+/*=============================================<<<<<*/
+
+.modal-mask {
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+    border: 0 !important;
+}
+
+.modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container {
+    max-width: 400px;
+    height: 90%;
+    max-height: 500px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    float: right;
+}
+
+/*
+ * the following styles are auto-applied to elements with
+ * v-transition="modal" when their visiblity is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter, .modal-leave {
+  opacity: 0;
+}
+.vb-content {
+    height: auto;
+    max-height: 400px !important;
+}
+.modal-enter .modal-container,
+.modal-leave .modal-container {
+
+}
+.vb > .vb-dragger {
+    z-index: 5;
+    width: 12px;
+    right: 0;
+}
+
+.vb > .vb-dragger > .vb-dragger-styler {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotate3d(0,0,0,0);
+    transform: rotate3d(0,0,0,0);
+    -webkit-transition:
+        background-color 100ms ease-out,
+        margin 100ms ease-out,
+        height 100ms ease-out;
+    transition:
+        background-color 100ms ease-out,
+        margin 100ms ease-out,
+        height 100ms ease-out;
+    background-color: #DF1780;
+    margin: 5px 5px 5px 0;
+    border-radius: 20px;
+    height: calc(100% - 10px);
+    display: block;
+}
+
+.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: #DF1780;
+}
+
+.vb > .vb-dragger:hover > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+    margin: 0px;
+    height: 100%;
+}
+
+.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+    margin: 0px;
+    height: 100%;
+}
+
+.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+}

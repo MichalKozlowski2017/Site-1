@@ -1,0 +1,127 @@
+.search-input {
+    width: 100%;
+    /* Rectangle 4: */
+    background: #fff;
+    border: 1px solid rgba(151,151,151,0.35);
+    border-radius: 4px;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 25px;
+    font-size: 12px;
+
+}
+#clearInput {
+    text-align: right;
+    color: rgba(255,255,255,0.5);
+    text-decoration: underline;
+    margin-top: -20px;
+    cursor: pointer;
+
+}
+
+.hint-module {
+    // margin-bottom: 30px;
+    h3 {
+        font-size: 17px;
+        color: #fff;
+        letter-spacing: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+    &__list {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__elem {
+            width: 33%;
+            min-height: 58px;
+            position: relative;
+            margin-bottom: 10px;
+            min-height: 70px;
+            a {
+                border-radius: 50px;
+                background-color: #fff;
+                width: 90%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            img {
+                position: absolute;
+                padding: 10px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+/*=================================
+=            Media 575px          =
+=================================*/
+@media (min-width: 575px) {
+    .hint-module {
+        &__list {
+            &__elem {
+                width: 25%;
+            }
+        }
+    }
+}
+
+/*=================================
+=            Media 768px          =
+=================================*/
+@media (min-width: 768px) {
+    .hint-module {
+        &__list {
+            &__elem {
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+
+/*=============================================>>>>>
+= Media 992px =
+===============================================>>>>>*/
+
+@media (min-width: 992px) {
+    .hint-module {
+        &__list {
+            &__elem {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/*= End of Media 992px =*/
+/*=============================================<<<<<*/
+/*=============================================>>>>>
+= Media 1200px =
+===============================================>>>>>*/
+
+@media (min-width: 1200px) {
+    .hint-module {
+        &__list {
+            &__elem {
+                width: 50%;
+                img {
+                }
+            }
+        }
+    }
+}
+
+
+/*= End of Media 1200px =*/
+/*=============================================<<<<<*/
+
+
+

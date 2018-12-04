@@ -1,0 +1,229 @@
+.ribbon {
+    position: absolute;
+    width: 142px;
+    height: 147px;
+    background-image: url(/images/ribbon.png);
+    background-size: 142px 147px;
+    right: -5px;
+    top: -10px;
+}
+.ribbon-reg {
+    position: absolute;
+    width: 142px;
+    height: 147px;
+    background-image: url(/images/ribbon_reg.png);
+    background-size: 142px 147px;
+    right: -5px;
+    top: -10px;
+}
+
+.no-contests {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.60);
+}
+.contests {
+    &__list {
+        &__wrapper {
+            position: relative;
+
+        }
+        &__shops {
+
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h3 {
+            opacity: 0.8;
+            font-size: 22px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 22px;
+        }
+        &__contest {
+            position: relative;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            a {
+                width: 100%;
+            }
+            &__logo {
+                position: relative;
+                margin-right: 0;
+                img {
+                    position: relative;
+                    left: 10px;
+                    top: 50%;
+                    left: 50%;
+                    width: auto;
+                    max-width: 120px;
+                    padding-left: 15px;
+                    padding-top: 15px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &__desc {
+                padding: 13px 10px 13px 15px;
+                h4 {
+                    font-size: 18px;
+                    color: $primary;
+                    letter-spacing: 0;
+                    line-height: 20px;
+                }
+                p {
+                    font-size: 12px;
+                    span {
+                        color: $primary;
+                        font-weight: 900;
+                        font-style: normal;
+                    }
+                    &:after {
+                        content: '';
+                        width: 15px;
+                        height: 19px;
+                        position: absolute;
+                        margin-left: 10px;
+                        background-image: url(/images/arrow.png);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/*=============================================>>>>>
+= Media 575px =
+===============================================>>>>>*/
+
+.contests {
+    &__list {
+        &__contest {
+            display: flex;
+            flex-direction: row;
+            &__logo {
+                margin-right: 0;
+                img {
+                    padding-left: 15px;
+                    padding-top: 0;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+/*= End of Media 575px =*/
+/*=============================================<<<<<*/
+
+/*=============================================>>>>>
+= Media 768px =
+===============================================>>>>>*/
+
+@media (min-width: 768px) {
+    .contests {
+        &__list {
+            h3 {
+                opacity: 0.8;
+                font-size: 22px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                line-height: 22px;
+            }
+            &__contest {
+                position: relative;
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                flex-direction: row;
+                padding-left: 15px;
+                &__logo {
+                    position: relative;
+                    margin-right: 20px;
+                    img {
+                        position: relative;
+                        max-width: 300px;
+                        // left: 10px;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                &__desc {
+                    padding: 20px 10px 20px 0px;
+                    h4 {
+                        font-size: 26px;
+                        color: $primary;
+                        letter-spacing: 0;
+                        line-height: 30px;
+                    }
+                    p {
+                        font-size: 17px;
+                        span {
+                            color: $primary;
+                            font-weight: 900;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contests__list__shops {
+    position: fixed;
+    z-index: 9999;
+    width: 90%;
+    opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    background-color: #fff;
+    h4 {
+        color: $primary;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        width: 15px;
+        height: 15px;
+        background-image: url(/images/cross.png);
+        background-size: 15px 15px;
+        background-color: #fff;
+        img {
+
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        padding-right: 30px;
+        li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e5e5;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    @include mq($min-width: 768px) {
+        width: 50%;
+    }
+}

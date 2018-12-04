@@ -1,0 +1,360 @@
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~sass-mediaqueries/media-queries";
+@import "variables";
+@import "mixins";
+@import "ext";
+
+/* Components */
+@import "components/button";
+@import "components/form";
+@import "components/sections";
+@import "components/contests";
+@import "components/search";
+@import "components/modal";
+@import "components/footer";
+
+
+html {
+
+}
+body,
+html {
+  @include mp-reset;
+  width: 100% !important;
+  height: 100% !important;
+
+}
+
+body {
+      background: #eb82b4;
+    background-repeat: no-repeat;
+
+    background: -moz-linear-gradient(top, #eb82b4 2%, #db217b 100%);
+    background: -webkit-linear-gradient(top, #eb82b4 2%,#db217b 100%);
+    background: linear-gradient(to bottom, #eb82b4 2%,#db217b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb82b4', endColorstr='#db217b',GradientType=0 );
+    background-attachment: fixed;
+    font-family: $font-family;
+}
+h1, h2, h3, h4 {
+    font-family: $font-family;
+}
+
+.progress {
+    background-color: transparent !important;
+}
+
+.wrapper {
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.wrapper-regionalne {
+    background-color: #efefef;
+}
+.finished {
+    button {
+        margin: 0px;
+    }
+    .contests__list__contest__desc {
+        p {
+            &:after {
+                display: none;
+            }
+            a {
+                color: $primary;
+                font-weight: 300;
+                margin-right: 40px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.thanks {
+    text-align: center;
+    h2 {
+        font-size: 40px;
+        color: $primary;
+    }
+    padding: 50px 30px;
+    button {
+        margin-top: 20px;
+    }
+}
+
+.flower {
+    margin-left: -30px;
+    margin-bottom: 35px;
+}
+
+.contest-single {
+    position: relative;
+    &__prize {
+            padding: 20px 15px;
+        img {
+            margin: 0 auto;
+        }
+    }
+    &__question {
+        padding-left: 15px;
+        padding-right: 15px;
+        p {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 32px;
+            color: #CD377E;
+            letter-spacing: 0;
+            line-height: 37px;
+        }
+    }
+    .contests__list__contest__desc {
+        p {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.footer-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #F29DC5;
+    letter-spacing: 0.71px;
+}
+
+@media (min-width: 768px) {
+    .contest-single {
+        &__banner {
+            background-image: url(/images/stars.jpg);
+            background-size: cover;
+            background-position: center top;
+            height: 200px;
+            width: 100%;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            &__claim {
+                position: absolute;
+                background-image: url(/images/single_claim.png);
+                background-size: 344px 150px;
+                width: 344px;
+                height: 150px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &__packshot-1 {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 200px;
+            }
+            &__packshot-2 {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 200px;
+            }
+        }
+        &__prize {
+                padding: 20px 15px;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &__question {
+            padding-left: 15px;
+            padding-right: 15px;
+            h2 {
+                font-size: 35px;
+                color: #CD377E;
+                letter-spacing: 0;
+                line-height: 40px;
+            }
+        }
+        .contests__list__contest__desc {
+            p {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .footer-text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        color: #F29DC5;
+        letter-spacing: 0.71px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contest-single {
+        &__banner {
+            &__packshot-1 {
+                width: 170px;
+            }
+            &__packshot-2 {
+                width: 170px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .contest-single {
+        &__banner {
+            background-image: url(/images/stars.jpg);
+            background-size: cover;
+            height: 300px;
+            width: 100%;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            position: relative;
+            &__claim {
+                position: absolute;
+                background-image: url(/images/single_claim.png);
+                background-size: 344px 150px;
+                width: 344px;
+                height: 150px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &__packshot-1 {
+                width: 330px;
+            }
+            &__packshot-2 {
+                width: 330px;
+            }
+        }
+
+        &__prize {
+                padding: 20px 15px;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &__question {
+            padding: 10px 100px;
+            h2 {
+                font-size: 35px;
+                color: #CD377E;
+                letter-spacing: 0;
+                line-height: 40px;
+            }
+        }
+        .contest-form {
+            padding: 10px 85px;
+        }
+        .contests__list__contest {
+            padding: 10px 100px;
+        }
+        .contests__list__contest__desc {
+
+            h4 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 23px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .contest-single {
+        &__banner {
+            background-image: url(/images/stars.jpg);
+            background-size: cover;
+            height: 350px;
+            width: 100%;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            position: relative;
+            &__claim {
+                position: absolute;
+                background-image: url(/images/single_claim.png);
+                background-size: 482px 210px;
+                width: 482px;
+                height: 210px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+        .contest-form {
+            padding: 10px 85px;
+        }
+        &__prize {
+                padding: 20px 15px;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &__question {
+            padding: 10px 100px;
+            h2 {
+                font-size: 35px;
+                color: #CD377E;
+                letter-spacing: 0;
+                line-height: 40px;
+            }
+        }
+        .contests__list__contest__desc {
+            h4 {
+                font-size: 34px;
+                line-height: 1.2;
+            }
+            p {
+                font-size: 24px;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 750px) {
+    .flower-hide {
+        display: none;
+    }
+
+}
+
+@media (max-height: 500px) {
+    .flower-finished-hide {
+        display: none;
+    }
+
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .1s
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}
+
+.cc-window {
+    z-index: 9999999 !important;
+}
+.cc-message {
+    font-size: 12px;
+    line-height: 1.3;
+}
